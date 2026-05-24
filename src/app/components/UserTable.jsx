@@ -21,7 +21,7 @@ const UserTable = ({ users }) => {
                                     <Table.Cell>{user.email}</Table.Cell>
                                     <Table.Cell>{user.role}</Table.Cell>
                                     <Table.Cell className="flex gap-3">
-                                        <Link href={``}>
+                                        <Link href={`/users/${users._id}`}>
                                             <Button variant="outline">Details</Button>
                                         </Link>
                                         <Link href={``}>
