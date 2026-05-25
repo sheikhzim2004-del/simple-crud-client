@@ -4,8 +4,15 @@ export const userData = async() => {
     return data;
 }
 
+
 export const getUserById = async(userId) => {
     const res = await fetch(`http://localhost:8080/users/${userId}`);
     const data = await res.json();
     return data;
 }
+
+// export const getUserById = async(userId) => {
+//     const res = await fetch(`http://localhost:8080/users/${userId}`);
+//     const data = await res.json();
+//     return data;
+// }

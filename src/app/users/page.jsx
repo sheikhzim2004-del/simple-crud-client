@@ -6,7 +6,7 @@ const UsersPage = async() => {
     const users = await userData();
     return (
         <div>
-            <h2>User Management: {users.length}</h2>
+            <h2 className='text-2xl font-medium'>User Management: {users.length}</h2>
             <UserTable users={users}></UserTable>
         </div>
     );
