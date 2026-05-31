@@ -1,16 +1,11 @@
 'use client';
 import { AlertDialog, Button } from '@heroui/react';
 import React from 'react';
-// import { deleteUserById } from '../lib/action';
 
-const AlertDialogue = ({ user }) => {
+const AlertDialogue = ({ user, deleteUserById }) => {
 
   const handleDelete = async (userId) => {
-    const res = await fetch(`http://localhost:8080/users/${userId}`, {
-      method: 'DELETE',
-    })
-    const data = await res.json();
-    
+    await deleteUserById(userId);
     console.log("delete user", userId);
   }
 

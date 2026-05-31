@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import AlertDialogue from './AlertDialogue';
 
-const UserTable = ({ users }) => {
+const UserTable = ({ users, deleteUserById }) => {
     return (
         <div>
             <Table>
@@ -28,7 +28,10 @@ const UserTable = ({ users }) => {
                                         <Link href={``}>
                                             <Button variant="outline">Edit</Button>
                                         </Link>
-                                        <AlertDialogue user={user}></AlertDialogue>
+                                        <AlertDialogue 
+                                        user={user}
+                                        deleteUserById={deleteUserById}
+                                        ></AlertDialogue>
                                     </Table.Cell>
                                 </Table.Row>)
                             }
